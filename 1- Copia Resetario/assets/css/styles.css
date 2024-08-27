@@ -1,0 +1,155 @@
+@import url('https://fonts.googleapis.com/css2?family=Edu+VIC+WA+NT+Beginner:wght@400..700&family=Exo+2:ital,wght@0,100..900;1,100..900&family=Grey+Qo&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Edu+VIC+WA+NT+Beginner:wght@400..700&family=Exo+2:ital,wght@0,100..900;1,100..900&family=Grey+Qo&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    background-color: azure;
+}
+.contenedor {
+    display: flex;
+    justify-content: center;
+}
+.contenedor-img {
+    background-image: url(/assets/imagen/omelett.jpg);
+    height: 60vh;
+    width: 70vw;
+    background-size: 70vw 60vh;
+    background-repeat: no-repeat;
+    background-position: center;
+    border-radius: 2rem;
+    margin-top: 2rem;
+    display: flex;
+    justify-content: center;
+}
+.title {
+    color: rgb(208, 228, 27);
+    padding-top: 18rem;
+    font-size: 3em;
+    font-weight: bold;
+    text-shadow: 2px 3px 5px black;
+    font-family: "Exo 2", sans-serif;
+}
+@media(min-width: 768px) {
+    .title{
+        font-size: 3em;
+        padding-top: 11rem;        
+    }
+}
+
+
+/*--MAIN--*/
+.main {
+    flex-direction: column;
+    align-items: center;
+}
+.main-container{
+    height: 37.2vh;
+    width: 70vw;
+    margin-top: 2rem;
+    background-color: white;
+    border-radius: 2rem;
+    box-shadow: 2px 2px 5px gray;
+}
+.cards {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.card {
+    background-color: #FFDA36;
+    height: 8.5vh;
+    width: 35vw;
+    border-radius: 1rem;
+    margin: 0.5rem;
+    box-shadow: 2px 2px 2px 2px gray;
+}
+@media (min-width: 768px){
+    .main-container {
+        height: 26vh;
+    }
+    .cards {
+        flex-direction: row;
+        justify-content: space-evenly;
+        column-gap: 5rem;
+
+    }
+    .card {
+        width: 15vw;
+        height: 12vh;
+    }
+}
+.subtitle {
+    text-align: center;
+    font-size: 1.4em;
+    margin: 1.5rem 0 0.5rem 0;
+    font-family: "Exo 2", sans-serif;
+}
+
+.clasif {
+    padding: 0.6rem 0 0rem 0;
+    font-size: 1.3em;
+}
+.time {
+    font-size: 1.8em;
+}
+.clasif,
+.time {
+    padding-left: 2.2rem;
+    font-family: "Edu VIC WA NT Beginner", cursive;
+}
+@media (min-width: 768px){
+    .clasif{
+        padding: 0.8rem 0 0rem 0;
+        font-size: 1.2em;
+    }
+    .time{
+        font-size: 1.5em;
+    }
+    .clasif,
+    .time {
+        padding-left: 2rem;
+        font-family: "Edu VIC WA NT Beginner", cursive;
+    }
+}
+
+/*--CONTENIDO--*/
+.content {
+    height: 29vh;
+}
+.instruction-content {
+    height: 37vh;
+}
+.nutrition-content{
+    height: 26vh;
+    margin-bottom: 2rem;
+}
+.ingredients {
+    margin: 1rem 0 0 3rem;
+    font-family: "Edu VIC WA NT Beginner", cursive;
+}
+.ingredients h1 {
+    font-size: 2.6em;
+    margin-bottom: 2rem;
+}
+.ingredients p {
+    font-size: 1.3rem;
+    margin-top: 1.3rem;
+}
+.ingredients .bajo .room {
+    margin-top: 0;
+    font-size: 1em;
+}
+@media (min-width: 768px) {
+    .content {
+        height: 50vh;
+    }
+    .instruction-content {
+        height: 62vh;
+    }
+    .nutrition-content{
+        height: 47vh;
+    }
+}
