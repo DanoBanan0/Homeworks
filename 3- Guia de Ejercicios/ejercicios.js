@@ -160,3 +160,97 @@ function descuentoDeViaje(){
             break
     }
 }
+
+function numeroIngreso(){
+    let numeros = [];
+    let negativos = 0;
+    let positivos = 0;
+    let multiplos15 = 0;
+    let pares = 0 ;
+
+    for(let i = 0 ; i < 10 ; i++){
+        numeros[i] = parseInt(prompt("Ingrese el " + (i + 1) + "° número" ));
+
+        if(numeros[i] < 0)
+            negativos++;
+        else
+            positivos++;
+
+        if(numeros[i] % 15 == 0)
+            multiplos15++;
+        if(numeros[i] % 2 == 0)
+            pares++;
+    }
+
+    alert("Numero negativos: " + negativos + "\nNumeros positivos: " + positivos + "\nMultiplos de 15: " + multiplos15 + "\nNumeros pares: " + pares)
+}
+
+function tablaMultiplicar(){
+    let numero;
+
+    numero = parseInt(prompt("Ingrese el nuemro de la tabla de multiplicas que desee"));
+
+    alert(numero + " x 1 = " + (numero) + 
+    "\n" + numero + " x 2 = " + (numero * 2) +
+    "\n" + numero + " x 3 = " + (numero * 3) +
+    "\n" + numero + " x 4 = " + (numero * 4) +
+    "\n" + numero + " x 5 = " + (numero * 5) +
+    "\n" + numero + " x 6 = " + (numero * 6) +
+    "\n" + numero + " x 7 = " + (numero * 7) +
+    "\n" + numero + " x 8 = " + (numero * 8) +
+    "\n" + numero + " x 9 = " + (numero * 9) +
+    "\n" + numero + " x 10 = " + (numero * 10))
+}
+
+function cambioDeTemperatura(){
+    let celsius;
+    let fahrenheit;
+
+    celsius = parseFloat(prompt("Temperatura C°"))
+    fahrenheit = (celsius * (9/5) + 32)
+
+    if(fahrenheit >= 14 && fahrenheit <= 32)
+        alert("Temperatura baja")
+    if(fahrenheit > 32 && fahrenheit <= 68)
+        alert("Temperatura adecuada")
+    if(fahrenheit > 68 && fahrenheit <= 96)
+        alert("Temperatura Alta")
+    if(fahrenheit < 14 || fahrenheit > 96)
+        alert("Temperatura desconocida")
+}
+
+function edades(){
+    let edadesManiana = [];
+    let edadesTarde = [];
+    let edadesNoche = [];
+    let suma = [0,0,0];
+    let promedio = [0,0,0];
+
+    for(let i = 0 ; i < 5 ; i++){
+        edadesManiana[i] = parseInt(prompt("EDAD POR LA MAÑANA\nIngrese la " + (i+1) + "° edad:"));
+        suma[0] += edadesManiana[i];
+    }
+    for(let i = 0 ; i < 6 ; i++){
+        edadesTarde[i] = parseInt(prompt("EDAD POR LA TARDE\nIngrese la " + (i+1) + "° edad:"));
+        suma[1] += edadesTarde[i]
+    }
+    for(let i = 0 ; i < 11 ; i++){
+        edadesNoche[i] = parseInt(prompt("EDAD POR LA NOCHE\nIngrese la " + (i+1) + "° edad:"));
+        suma[2] += edadesNoche[i];
+    }
+
+    promedio = [suma[0] / 5 , suma[1] / 6 , suma[2] / 11]
+    
+    alert("Promedio de Edades por la Mañana: " + promedio[0] + "\nPromedio de Edades por la Tarde: " + promedio[1] + "\nPromedio de Edades por la Noche: " + promedio[2]);
+    
+    if(promedio[0] > promedio[1] && promedio[0] > promedio[2])
+        alert("El mayor promedio de edades mayores lo tiene el grupo por la MAÑANA")
+    else{
+        if(promedio[1] > promedio[0] && promedio[1] > promedio[2])
+            alert("El mayor promedio de edades mayores lo tiene el grupo por la TARDE")
+        else{
+            if(promedio[2] > promedio[0] && promedio[2] > promedio[1])
+                alert("El mayor promedio de edades mayores lo tiene el grupo por la NOCHE")
+        }
+    }
+}
